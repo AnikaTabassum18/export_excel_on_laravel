@@ -1,0 +1,41 @@
+at first we need use 
+
+
+use Maatwebsite\Excel\Concerns
+
+
+for excel export.
+
+
+
+step - 1
+
+blade.php 
+
+add excel button.
+
+
+step - 2
+
+web.php
+
+first write route on web.php.
+
+
+
+step - 3
+
+controller.php
+
+        return Excel::download(new OrderSheetExport($request), 'orderSheet.xlsx');
+
+write for downloading excel file and pass data controller to app/exports/ file.
+
+
+step - 4
+
+app/exports/files.php
+
+
+Then We need to write collection() function. 
+Where We can get data from controller and we can using this for excel file.
